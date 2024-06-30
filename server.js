@@ -10,9 +10,8 @@ const __dirname = path.dirname(__filename);
 const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
-
 server.use(middlewares);
-server.use('/api', router); // Add /api prefix to routes
+server.use(router);
 server.listen(4000, () => {
   console.log('JSON Server is running on port 4000');
 });
