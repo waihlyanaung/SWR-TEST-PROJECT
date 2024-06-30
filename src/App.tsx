@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl mb-4">CRUD with SWR and Tailwind CSS</h1>
+      <h1 className="text-2xl mb-4">CRUD with SWR & Tailwind CSS</h1>
       <ItemForm mutate={mutate} />
       <ItemList />
     </div>
