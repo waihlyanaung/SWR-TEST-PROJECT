@@ -5,7 +5,9 @@ import { fileURLToPath } from 'url';
 const server = jsonServer.create();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const router = jsonServer.router(path.join(__dirname, 'db.json')); // Path to your db.json file
+
+// Use relative path for db.json
+const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
